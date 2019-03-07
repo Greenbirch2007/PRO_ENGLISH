@@ -46,39 +46,27 @@ def get_first_page(url):
 
 # print(html)  #正则还是有问题，选择了一个动态变动的颜色标记是不好的 最近浏览不是每次都有的！所以用数字的颜色取判断吧
 
-# def parse_html(html):  # 正则专门有反爬虫的布局设置，不适合爬取表格化数据！
-#     big_list = []
-#     selector = etree.HTML(html)
-#     title = selector.xpath('/html/body/div[3]/div[2]/div[2]/div[2]/ul//h2/a[2]/text()')
-#     mp3_link = selector.xpath('//*[@id="tbl_wrap"]/table/tbody/tr/th[2]/a/text()')
-#     for i1, i2 in zip(title, mp3_link):  # 两个列表分别遍历然后组成一个新的元组，或新的列表！
-#         title_f = i1[11:]
-#         link_f = "http://www.kekenet.com/mp3" + i2[6:]
-#         big_list.append((title_f,link_f))
-
-
-# lxml解析失效，只能使用正则
-
-def parse_html(html):
-    patt = re.compile('<a href="(.*?)" title="(.*?)" target="_blank",re.S>')
-    items = re.findall(patt,html)
-    pass
+def parse_html(html):  # 正则专门有反爬虫的布局设置，不适合爬取表格化数据！
+    big_list = []
+    selector = etree.HTML(html)
+    words = selector.xpath('/html/body/div[3]/div/div[1]/div[2]/div/table/tbody/tr/td[1]/strong/text()')
+    meanings = selector.xpath('/html/body/div[3]/div/div[1]/div[2]/div/table/tbody/tr/td[2]/text()')
+    for i1,i2 in zip(words,meanings):
+        big_list.append((i1,i2))
+    return big_list
 
 
 
 
 
-'http://www.kekenet.com/toeic/201806/549088.shtml' # 最终map３
-'http://www.kekenet.com/toeic/201806/549088.shtml'
-'http://www.kekenet.com/mp3/201806/549088.shtml'
 
-'/toeic/201806/549088.shtml'
+
 
 
 # 存储到MySQL中
 
 def insertDB(content):
-    connection = pymysql.connect(host='127.0.0.1', port=3306, user='root', password='123456', db='hk_stock',
+    connection = pymysql.connect(host='127.0.0.1', port=3306, user='root', password='123456', db='SBW',
                                  charset='utf8mb4', cursorclass=pymysql.cursors.DictCursor)
     cursor = connection.cursor()
     try:
@@ -102,9 +90,10 @@ def insertDB(content):
 #         print(datetime.datetime.now())
 #
 
-url = 'http://www.kekenet.com/toeic/'
+url = 'https://www.shanbay.com/wordlist/91918/137059/'
 html = get_first_page(url)
-parse_html(html)
+content = parse_html(html)
+print(content)
 
 # 字段设置了唯一性 unique
 

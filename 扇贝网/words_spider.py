@@ -7,23 +7,33 @@ import re
 import pymysql
 
 import time
+
+import requests
 from requests.exceptions import ConnectionError
 from selenium import webdriver
 from lxml import etree
 import datetime
 
-driver = webdriver.Chrome()
+# driver = webdriver.Chrome()
+from requests.exceptions import RequestException
 
 
 # 请求
 
 def get_first_page(url):
     # driver = webdriver.PhantomJS(service_args=SERVICE_ARGS)
-    driver.set_window_size(1200, 1200)  # 设置窗口大小
-    driver.get(url)
-    html = driver.page_source
-    time.sleep(6)
-    return html
+    # driver.set_window_size(1200, 1200)  # 设置窗口大小
+    # driver.get(url)
+    # html = driver.page_source
+    # time.sleep(6)
+    # return html
+    try:
+        response = requests.get(url)
+        if response.status_code == 200:
+            return response.text
+        return None
+    except RequestException:
+        return None
 
 
 # 把首页和翻页处理？
@@ -51,7 +61,12 @@ def parse_html(html):  # 正则专门有反爬虫的布局设置，不适合爬�
     selector = etree.HTML(html)
     words = selector.xpath('/html/body/div[3]/div/div[1]/div[2]/div/table/tbody/tr/td[1]/strong/text()')
     meanings = selector.xpath('/html/body/div[3]/div/div[1]/div[2]/div/table/tbody/tr/td[2]/text()')
-    for i1,i2 in zip(words,meanings):
+    s_contents = []
+    for item in meanings:
+        s = "".join(item.split("\n"))
+        s_contents.append(s)
+
+    for i1,i2 in zip(words,s_contents):
         big_list.append((i1,i2))
     return big_list
 
@@ -59,7 +74,20 @@ def parse_html(html):  # 正则专门有反爬虫的布局设置，不适合爬�
 
 
 
-
+def Python_sel_Mysql():
+    # 使用cursor()方法获取操作游标
+    connection = pymysql.connect(host='127.0.0.1', port=3306, user='root', password='123456', db='SBW',
+                                 charset='utf8mb4', cursorclass=pymysql.cursors.DictCursor)
+    cur = connection.cursor()
+    #sql 语句
+    for i in range(1,6106):
+        sql = 'select link from F_links where id = %s ' % i
+        # #执行sql语句
+        cur.execute(sql)
+        # #获取所有记录列表
+        data = cur.fetchone()
+        url = data['link']
+        yield url
 
 
 
@@ -70,41 +98,27 @@ def insertDB(content):
                                  charset='utf8mb4', cursorclass=pymysql.cursors.DictCursor)
     cursor = connection.cursor()
     try:
-        cursor.executemany('insert into hk_stock (code,name) values (%s,%s)', content)
+        cursor.executemany('insert into words_contents (word,contents) values (%s,%s)', content)
         connection.commit()
         connection.close()
         print('向MySQL中添加数据成功！')
     except StopIteration:
         pass
 
+if __name__ == '__main__':
+    for url_str in Python_sel_Mysql():
+        html = get_first_page(url_str)
+        content = parse_html(html)
+        insertDB(content)
+        print(datetime.datetime.now())
 
-# if __name__ == '__main__':
-#     html = get_first_page()
-#     content = parse_html(html)
-#     time.sleep(3)
-#     insertDB(content)
-#     while True:
-#         html = next_page()
-#         content = parse_html(html)
-#         insertDB(content)
-#         print(datetime.datetime.now())
-#
 
-url = 'https://www.shanbay.com/wordlist/91918/137059/'
-html = get_first_page(url)
-content = parse_html(html)
-print(content)
 
-# 字段设置了唯一性 unique
-
-# create table hk_stock(
+# create table words_contents(
 # id int not null primary key auto_increment,
-# code varchar(12) unique,
-# name varchar(50)
+# word varchar(50) ,
+# contents text
 # ) engine=InnoDB  charset=utf8;
 
-# 传入url太快了，考虑分成两部分完成：1.先存到数据库中或其他容器中（数据结构不行）
-#  2. 再从数据库中逐个调取进行爬取   3. 中间过渡的数据库是用内存型（redis) 还是一般存储型的？
-# 4.数据量小，爬取，传入，再解析影响不大，但是分布式爬取大量数据，就必须要切割开来，才能各司其职，有效处理各自的工作！
-# 5.容器是必备，分布式必备，代理池也是必备
 
+# drop  table words_contents;

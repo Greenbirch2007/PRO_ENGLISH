@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c39da6f5-67ee-486b-af20-3323b4500a29" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/PRO_ENGLISH.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PRO_ENGLISH.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business_talking_900.py" beforeDir="false" afterPath="$PROJECT_DIR$/business_talking_900.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/note.txt" beforeDir="false" afterPath="$PROJECT_DIR$/note.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/可可英语/托业真题听力每日一句/TOEIC_daily_S.py" beforeDir="false" afterPath="$PROJECT_DIR$/可可英语/托业真题听力每日一句/TOEIC_daily_S.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/可可英语/托业真题听力每日一句/TOEIC_daily_S_Dmp3.py" beforeDir="false" afterPath="$PROJECT_DIR$/可可英语/托业真题听力每日一句/TOEIC_daily_S_Dmp3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/深度截图_选择区域_20181228131157.png" beforeDir="false" afterPath="$PROJECT_DIR$/深度截图_选择区域_20181228131157.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/扇贝网/Big_links.py" beforeDir="false" afterPath="$PROJECT_DIR$/扇贝网/Big_links.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/扇贝网/Small_links.py" beforeDir="false" afterPath="$PROJECT_DIR$/扇贝网/Small_links.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/扇贝网/words_spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/扇贝网/words_spider.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,8 +18,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/扇贝网/Big_links.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="110" selection-end-line="110" />
+            <state relative-caret-position="780">
+              <caret line="64" column="57" selection-start-line="64" selection-start-column="57" selection-end-line="64" selection-end-column="57" />
+              <folding>
+                <element signature="e#37#46#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -35,17 +30,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/扇贝网/Small_links.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="57" lean-forward="true" selection-end-line="110" />
+            <state relative-caret-position="1140">
+              <caret line="86" selection-start-line="86" selection-end-line="86" />
+              <folding>
+                <element signature="e#37#46#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/扇贝网/words_spider.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1650">
+              <caret line="123" column="29" selection-start-line="123" selection-start-column="29" selection-end-line="123" selection-end-column="29" />
+              <folding>
+                <element signature="e#37#46#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/扇贝网/words_spider.py">
+        <entry file="file://$PROJECT_DIR$/扇贝网/F_links.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2">
-              <caret line="93" column="26" lean-forward="true" selection-start-line="93" selection-start-column="26" selection-end-line="93" selection-end-column="26" />
+            <state relative-caret-position="407">
+              <caret line="80" selection-start-line="80" selection-end-line="84" />
+              <folding>
+                <element signature="e#37#46#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -65,9 +78,10 @@
       <list>
         <option value="$PROJECT_DIR$/可可英语/托业真题听力每日一句/TOEIC.py" />
         <option value="$PROJECT_DIR$/可可英语/托业真题听力每日一句/TOEIC_daily_S.py" />
+        <option value="$PROJECT_DIR$/扇贝网/words_spider.py" />
         <option value="$PROJECT_DIR$/扇贝网/Big_links.py" />
         <option value="$PROJECT_DIR$/扇贝网/Small_links.py" />
-        <option value="$PROJECT_DIR$/扇贝网/words_spider.py" />
+        <option value="$PROJECT_DIR$/扇贝网/F_links.py" />
       </list>
     </option>
   </component>
@@ -82,6 +96,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -109,7 +124,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -128,7 +142,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.words_spider">
+  <component name="RunManager" selected="Python.F_links">
     <configuration name="Big_links" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PRO_ENGLISH" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -142,6 +156,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/扇贝网/Big_links.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="F_links" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PRO_ENGLISH" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/扇贝网" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/扇贝网/F_links.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -215,9 +250,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.words_spider" />
+        <item itemvalue="Python.F_links" />
         <item itemvalue="Python.Small_links" />
         <item itemvalue="Python.Big_links" />
+        <item itemvalue="Python.words_spider" />
         <item itemvalue="Python.TOEIC_daily_S" />
       </list>
     </recent_temporary>
@@ -243,12 +279,12 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32879046" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32879046" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32879046" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32879046" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32879046" />
       <window_info anchor="bottom" id="Python Console" order="10" />
@@ -256,6 +292,25 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24981412" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32879046" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32879046" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32879046" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/可可英语/托业真题听力每日一句/TOEIC.py" />
@@ -268,22 +323,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/扇贝网/Big_links.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="110" selection-end-line="110" />
+        <state relative-caret-position="780">
+          <caret line="64" column="57" selection-start-line="64" selection-start-column="57" selection-end-line="64" selection-end-column="57" />
+          <folding>
+            <element signature="e#37#46#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/扇贝网/Small_links.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="57" lean-forward="true" selection-end-line="110" />
+        <state relative-caret-position="1140">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
+          <folding>
+            <element signature="e#37#46#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/扇贝网/words_spider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2">
-          <caret line="93" column="26" lean-forward="true" selection-start-line="93" selection-start-column="26" selection-end-line="93" selection-end-column="26" />
+        <state relative-caret-position="1650">
+          <caret line="123" column="29" selection-start-line="123" selection-start-column="29" selection-end-line="123" selection-end-column="29" />
+          <folding>
+            <element signature="e#37#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/扇贝网/F_links.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="80" selection-start-line="80" selection-end-line="84" />
+          <folding>
+            <element signature="e#37#46#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

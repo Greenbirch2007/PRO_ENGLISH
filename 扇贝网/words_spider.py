@@ -80,7 +80,7 @@ def Python_sel_Mysql():
                                  charset='utf8mb4', cursorclass=pymysql.cursors.DictCursor)
     cur = connection.cursor()
     #sql 语句
-    for i in range(1,6106):
+    for i in range(7900,146898):
         sql = 'select link from F_links where id = %s ' % i
         # #执行sql语句
         cur.execute(sql)
@@ -119,6 +119,6 @@ if __name__ == '__main__':
 # word varchar(50) ,
 # contents text
 # ) engine=InnoDB  charset=utf8;
-
+#
 
 # drop  table words_contents;

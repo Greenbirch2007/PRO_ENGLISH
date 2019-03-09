@@ -30,7 +30,7 @@ def Python_sel_Mysql():
                                  charset='utf8mb4', cursorclass=pymysql.cursors.DictCursor)
     cur = connection.cursor()
     #sql 语句
-    for i in range(1,14689):
+    for i in range(7354,14689):
         sql = 'select link from Small_links where id = %s ' % i
         # #执行sql语句
         cur.execute(sql)
